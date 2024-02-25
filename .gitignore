@@ -1,3 +1,5 @@
 wandb
 ai4life-personal-trainer
 .env
+
+__pycache__/
