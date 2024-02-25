@@ -58,19 +58,9 @@ def train_model(
     trainer.train()
 
 
-def run_train():
-
-    # ======== Logging in to Hugging Face Hub and Weights & Biases ========
-    hf_token = "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"
-    login(hf_token, add_to_git_credential=False)
-
-    # ======== Logging in to Weights & Biases ========
-    # Get key at https://wandb.ai/authorize
-    wandb_key = "7cef42da986b9a35aabf18181bc73a867a875b8f"
-    wandb.login(key=wandb_key)
+def run_train(dataset_root_path, train_tsv_path, val_tsv_path):
 
     # ======== Downloading the dataset from Kaggle ========
-    dataset_root_path = pathlib.Path("/HDD1/manhckv/_manhckv/workoutfitness-video")
 
     if not dataset_root_path.exists():
         print("Downloading dataset from Kaggle...")
@@ -94,6 +84,8 @@ def run_train():
     # ======== Preparing the dataset ========
     train_dataset, val_dataset = prepare_dataset(
         dataset_root_path=dataset_root_path,
+        train_tsv_path=train_tsv_path,
+        val_tsv_path=val_tsv_path,
         image_processor=image_processor,
         model=model,
     )
@@ -116,4 +108,20 @@ def run_train():
 
 
 if __name__ == "__main__":
-    run_train()
+
+    # ======== Logging in to Hugging Face Hub and Weights & Biases ========
+    hf_token = "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"
+    login(hf_token, add_to_git_credential=False)
+
+    # ======== Logging in to Weights & Biases ========
+    # Get key at https://wandb.ai/authorize
+    wandb_key = "7cef42da986b9a35aabf18181bc73a867a875b8f"
+    wandb.login(key=wandb_key)
+
+    # ======== Preparing path ========
+
+    dataset_root_path = pathlib.Path("/HDD1/manhckv/_manhckv/workoutfitness-video")
+    train_tsv_path = "train.tsv"
+    val_tsv_path = "val.tsv"
+
+    run_train(dataset_root_path, train_tsv_path, val_tsv_path)

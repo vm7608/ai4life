@@ -37,7 +37,15 @@ def collate_fn(examples):
     return {"pixel_values": pixel_values, "labels": labels}
 
 
-def prepare_dataset(dataset_root_path, image_processor, model, sample_rate=4, fps=30):
+def prepare_dataset(
+    dataset_root_path,
+    train_tsv_path,
+    val_tsv_path,
+    image_processor,
+    model,
+    sample_rate=4,
+    fps=30,
+):
     mean = image_processor.image_mean
     std = image_processor.image_std
     if "shortest_edge" in image_processor.size:
@@ -85,7 +93,7 @@ def prepare_dataset(dataset_root_path, image_processor, model, sample_rate=4, fp
     )
 
     train_dataset = pytorchvideo.data.labeled_video_dataset(
-        data_path="./train_info.tsv",
+        data_path=train_tsv_path,
         clip_sampler=pytorchvideo.data.make_clip_sampler("random", clip_duration),
         decode_audio=False,
         transform=train_transform,
@@ -93,7 +101,7 @@ def prepare_dataset(dataset_root_path, image_processor, model, sample_rate=4, fp
     )
 
     val_dataset = pytorchvideo.data.labeled_video_dataset(
-        data_path="./val_info.tsv",
+        data_path=val_tsv_path,
         clip_sampler=pytorchvideo.data.make_clip_sampler("uniform", clip_duration),
         decode_audio=False,
         transform=val_transform,
@@ -103,7 +111,9 @@ def prepare_dataset(dataset_root_path, image_processor, model, sample_rate=4, fp
     return train_dataset, val_dataset
 
 
-def prepare_test_set(dataset_root_path, image_processor, model, sample_rate=4, fps=30):
+def prepare_test_set(
+    dataset_root_path, test_tsv_path, image_processor, model, sample_rate=4, fps=30
+):
     mean = image_processor.image_mean
     std = image_processor.image_std
     if "shortest_edge" in image_processor.size:
@@ -134,7 +144,7 @@ def prepare_test_set(dataset_root_path, image_processor, model, sample_rate=4, f
     )
 
     val_dataset = pytorchvideo.data.labeled_video_dataset(
-        data_path="./val_info.tsv",
+        data_path=test_tsv_path,
         clip_sampler=pytorchvideo.data.make_clip_sampler("uniform", clip_duration),
         decode_audio=False,
         transform=test_transform,
