@@ -60,15 +60,15 @@ def train_model(
 
 def run_train(dataset_root_path, train_tsv_path, val_tsv_path):
 
-    # ======== Downloading the dataset from Kaggle ========
+    # # ======== Downloading the dataset from Kaggle ========
 
-    if not dataset_root_path.exists():
-        print("Downloading dataset from Kaggle...")
-        kaggle.api.dataset_download_files(
-            "hasyimabdillah/workoutfitness-video",
-            str(dataset_root_path),
-            unzip=True,
-        )
+    # if not dataset_root_path.exists():
+    #     print("Downloading dataset from Kaggle...")
+    #     kaggle.api.dataset_download_files(
+    #         "hasyimabdillah/workoutfitness-video",
+    #         str(dataset_root_path),
+    #         unzip=True,
+    #     )
 
     # ======== Preparing the model ========
     MODEL_CKPT = "MCG-NJU/videomae-base"
@@ -91,8 +91,8 @@ def run_train(dataset_root_path, train_tsv_path, val_tsv_path):
     )
 
     # ======== Training the model ========
-    MODEL_NAME = "ai4life-personal-trainer"
-    NUM_EPOCHS = 30
+    MODEL_NAME = "/HDD1/manhckv/_manhckv/ckpt/ai4life-personal-trainer"
+    NUM_EPOCHS = 50
     BATCH_SIZE = 4
     LEARNING_RATE = 5e-5
     train_model(
@@ -120,8 +120,8 @@ if __name__ == "__main__":
 
     # ======== Preparing path ========
 
-    dataset_root_path = pathlib.Path("/HDD1/manhckv/_manhckv/workoutfitness-video")
-    train_tsv_path = "train.tsv"
-    val_tsv_path = "val.tsv"
+    dataset_root_path = pathlib.Path("/HDD1/manhckv/_manhckv")
+    train_tsv_path = "/home/manhckv/manhckv/ai4life/data_csv/train.csv"
+    val_tsv_path = "/home/manhckv/manhckv/ai4life/data_csv/val.csv"
 
     run_train(dataset_root_path, train_tsv_path, val_tsv_path)

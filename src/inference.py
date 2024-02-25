@@ -29,5 +29,5 @@ def run_inference(model_ckpt, video_path):
 
 if __name__ == "__main__":
     model_ckpt = "/home/manhckv/manhckv/ai4life/ai4life-personal-trainer"
-    video_path = "/home/manhckv/manhckv/ai4life/romanian deadlift_9.mp4"
+    video_path = "/home/manhckv/manhckv/ai4life/romanian deadlift_8.mp4"
     run_inference(model_ckpt, video_path)
