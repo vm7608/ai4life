@@ -4,4 +4,5 @@ ai4life-personal-trainer
 
 __pycache__/
 data_stable/*
+data_stable_images/*
 *.zip
