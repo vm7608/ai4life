@@ -5,7 +5,7 @@ from transformers import (
     pipeline,
 )
 
-from label_and_id import ID2LABEL, LABEL2ID
+from src.label_and_id import ID2LABEL, LABEL2ID
 
 
 def run_inference(model_ckpt, video_path):
@@ -24,10 +24,12 @@ def run_inference(model_ckpt, video_path):
         feature_extractor=image_processor,
         device=device,
     )
-    print(video_cls(video_path))
+    prediction = video_cls(video_path)
+    return LABEL2ID[prediction[0]['label']], prediction[0]['score'], prediction
 
 
 if __name__ == "__main__":
     model_ckpt = "/home/manhckv/manhckv/ai4life/ai4life-personal-trainer"
-    video_path = "/home/manhckv/manhckv/ai4life/romanian deadlift_8.mp4"
-    run_inference(model_ckpt, video_path)
+    video_path = "/home/manhckv/manhckv/ai4life/bench press_10.mp4"
+    _, _, pred = run_inference(model_ckpt, video_path)
+    print(pred)

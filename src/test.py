@@ -56,7 +56,12 @@ def run_test(model_ckpt, test_root_path, test_tsv_path):
         video_path = test_root_path + "/" + file_path
         # print(video_cls(video_path))
         ground_truth.append(label)
-        prediction = video_cls(video_path)
+        try:
+            prediction = video_cls(video_path)
+        except Exception as e:
+            print(f"Error: {e}")
+            print(f"File path: {video_path}")
+            exit(0)
         predictions.append(LABEL2ID[prediction[0]["label"]])
 
     # calculate the accuracy
@@ -69,7 +74,7 @@ def run_test(model_ckpt, test_root_path, test_tsv_path):
 if __name__ == "__main__":
 
     model_ckpt = "/home/manhckv/manhckv/ai4life/ai4life-personal-trainer"
-    test_root_path = "/HDD1/manhckv/_manhckv/workoutfitness-video"
-    test_tsv_path = "/home/manhckv/manhckv/ai4life/data/train_info.tsv"
+    test_root_path = "/HDD1/manhckv/_manhckv"
+    test_tsv_path = "/home/manhckv/manhckv/ai4life/data_csv/val.csv"
 
     run_test(model_ckpt, test_root_path, test_tsv_path)
