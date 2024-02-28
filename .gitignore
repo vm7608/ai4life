@@ -3,3 +3,5 @@ ai4life-personal-trainer
 .env
 
 __pycache__/
+data_stable/*
+*.zip
