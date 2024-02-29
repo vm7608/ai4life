@@ -1,6 +1,5 @@
 import pathlib
 
-import kaggle
 import torch
 from huggingface_hub import login
 from transformers import (
