@@ -2,6 +2,7 @@ import pathlib
 
 import kaggle
 import torch
+import wandb
 from huggingface_hub import login
 from transformers import (
     Trainer,
@@ -10,12 +11,8 @@ from transformers import (
     VideoMAEImageProcessor,
 )
 
-import wandb
 from helper import collate_fn, compute_metrics, prepare_dataset
 from label_and_id import ID2LABEL, LABEL2ID
-
-
-torch.set_num_threads(2)
 
 
 def train_model(

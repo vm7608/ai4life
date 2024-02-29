@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 
-from label_and_id import ID2LABEL, LABEL2ID
+from src.label_and_id import ID2LABEL, LABEL2ID
 
 
 # create 2 pandas dataframe with 3 columns: file_path and label
@@ -14,7 +14,7 @@ test_df = pd.DataFrame(columns=["file_path", "label"])
 root_dir = "/HDD1/manhckv/_manhckv/data-ai4life"
 data_btc_dir = "data-btc"
 data_crawl_dir = "data-crawl"
-active_learning_csv = "/home/manhckv/manhckv/ai4life/active_learning.csv"
+active_learning_csv = "/home/manhckv/manhckv/ai4life/test_active_learning.csv"
 
 # add all file in data_btc_dir to train_df
 for folder in os.listdir(os.path.join(root_dir, data_btc_dir)):

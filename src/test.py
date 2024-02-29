@@ -8,8 +8,6 @@ from sklearn.metrics import (
     classification_report,
     confusion_matrix,
     f1_score,
-    precision_score,
-    recall_score,
 )
 from tqdm import tqdm
 from transformers import (
@@ -22,9 +20,6 @@ from label_and_id import ID2LABEL, LABEL2ID
 
 
 warnings.filterwarnings("ignore")
-
-torch.set_num_threads(2)
-
 
 def run_test(model_ckpt, test_root_path, test_tsv_path):
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -73,8 +68,8 @@ def run_test(model_ckpt, test_root_path, test_tsv_path):
 
 if __name__ == "__main__":
 
-    model_ckpt = "/home/manhckv/manhckv/ai4life/ai4life-personal-trainer"
-    test_root_path = "/HDD1/manhckv/_manhckv"
-    test_tsv_path = "/home/manhckv/manhckv/ai4life/data_csv/val.csv"
+    model_ckpt = "/home/manhckv/manhckv/ai4life/checkpoint-6764"
+    test_root_path = "/HDD1/manhckv/_manhckv/ai4life-data"
+    test_tsv_path = "/home/manhckv/manhckv/ai4life/275_train_info.tsv"
 
     run_test(model_ckpt, test_root_path, test_tsv_path)

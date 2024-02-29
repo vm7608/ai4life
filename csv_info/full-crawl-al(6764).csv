@@ -1,0 +1,335 @@
+file_path,label,score
+/hammer curl/hammer curl_10.mp4,5,0
+/hammer curl/hammer curl_13.mp4,5,0.6717155575752258
+/hammer curl/hammer curl_9.mp4,5,0.999406099319458
+/hammer curl/hammer curl_12.mp4,5,0
+/hammer curl/hammer curl_11.mp4,5,0.9106731414794922
+/hammer curl/2.mp4,5,0.7902407050132751
+/hammer curl/7.mp4,5,0.2748616933822632
+/hammer curl/6.mp4,5,0.10151541978120804
+/hammer curl/1.mp4,5,0
+/hammer curl/hammer curl_8.mp4,5,0.9865880608558655
+/hammer curl/5.mp4,5,0.9969955682754517
+/hammer curl/hammer curl_6.mp4,5,0.9995105266571045
+/hammer curl/hammer curl_14.mp4,5,0.9989020824432373
+/hammer curl/hammer curl_3.mp4,5,0.9854407906532288
+/hammer curl/hammer curl_0.mp4,5,0.0017141127027571201
+/hammer curl/hammer curl_1.mp4,5,0.8893629908561707
+/hammer curl/hammer curl_4.mp4,5,0.994766354560852
+/hammer curl/hammer curl_5.mp4,5,0.9985017776489258
+/hammer curl/hammer curl_2.mp4,5,0.25149261951446533
+/hammer curl/3.mp4,5,0.10201238840818405
+/hammer curl/hammer curl_7.mp4,5,0.9955447912216187
+/bench press/incline bench press_6.mp4,1,0
+/bench press/bench press_12.mp4,1,0.9924598336219788
+/bench press/bench press_9.mp4,1,0.5441921353340149
+/bench press/bench press_19.mp4,1,0
+/bench press/bench press_0.mp4,1,0.014909140765666962
+/bench press/bench press_11.mp4,1,0.9995014667510986
+/bench press/bench press_15.mp4,1,0
+/bench press/incline bench press_8.mp4,1,0.981476366519928
+/bench press/bench press_10.mp4,1,0
+/bench press/bench press_7.mp4,1,0.9691877961158752
+/bench press/bench press_6.mp4,1,0.9783178567886353
+/bench press/bench press_2.mp4,1,0.0002207020588684827
+/bench press/bench press_18.mp4,1,0.9985332489013672
+/bench press/bench press_16.mp4,1,0.9940470457077026
+/bench press/bench press_5.mp4,1,0
+/bench press/bench press_1.mp4,1,0.9940902590751648
+/bench press/bench press_14.mp4,1,0
+/bench press/bench press_8.mp4,1,0.0014708259841427207
+/bench press/bench press_3.mp4,1,0.005172315984964371
+/pull Up/pull up_9.mp4,13,0
+/pull Up/pull up_1.mp4,13,0.999515175819397
+/pull Up/pull up_3.mp4,13,0.7647218704223633
+/pull Up/4.mp4,13,0.6031478643417358
+/pull Up/pull up_0.mp4,13,0.0002248599921585992
+/pull Up/pull up_6.mp4,13,0.134347602725029
+/pull Up/2.mp4,13,0
+/pull Up/1.mp4,13,0.00030977799906395376
+/pull Up/pull up_2.mp4,13,0.997960090637207
+/pull Up/pull up_4.mp4,13,0.07907867431640625
+/pull Up/pull up_5.mp4,13,0.8045597076416016
+/pull Up/pull up_8.mp4,13,0
+/pull Up/pull up_7.mp4,13,0.7546971440315247
+/pull Up/3.mp4,13,0.9428998231887817
+/tricep dips/tricep dips_3.mp4,21,0.017257127910852432
+/tricep dips/tricep dips_0.mp4,21,0.0023580037523061037
+/tricep dips/tricep dips_4.mp4,21,0.9994378685951233
+/tricep dips/tricep dips_5.mp4,21,0.9989438652992249
+/tricep dips/tricep dips_7.mp4,21,0.016194697469472885
+/tricep dips/tricep dips_9.mp4,21,0.9978957176208496
+/leg extension/leg extension_1.mp4,10,0.9991400241851807
+/leg extension/leg extension_10.mp4,10,0.9990662932395935
+/leg extension/leg extension_5.mp4,10,0.999494194984436
+/leg extension/leg extension_8.mp4,10,0.9994331002235413
+/leg extension/leg extension_0.mp4,10,0.02743101306259632
+/leg extension/2.mp4,10,0.027472641319036484
+/leg extension/1.mp4,10,0.9259259104728699
+/leg extension/leg extension_7.mp4,10,0.9949835538864136
+/leg extension/leg extension_6.mp4,10,0
+/leg extension/leg extension_4.mp4,10,0.9987163543701172
+/leg extension/leg extension_3.mp4,10,0.9984951019287109
+/leg extension/leg extension_9.mp4,10,0.9939740300178528
+/leg extension/leg extension_2.mp4,10,0.9993487000465393
+/leg extension/3.mp4,10,0.9906717538833618
+/lat pulldown/lat pulldown_1.mp4,8,0.03497915714979172
+/lat pulldown/lat pulldown_5.mp4,8,0.40493646264076233
+/lat pulldown/lat pulldown_4.mp4,8,0.9995050430297852
+/lat pulldown/lat pulldown_6.mp4,8,0.9992884397506714
+/lat pulldown/lat pulldown_10.mp4,8,0
+/lat pulldown/lat pulldown_13.mp4,8,0.0053697931580245495
+/lat pulldown/lat pulldown_8.mp4,8,0.07986218482255936
+/lat pulldown/lat pulldown_11.mp4,8,0.8895567059516907
+/lat pulldown/lat pulldown_2.mp4,8,0.016512315720319748
+/lat pulldown/lat pulldown_12.mp4,8,0.9994866847991943
+/lat pulldown/lat pulldown_0.mp4,8,6.232679152162746e-05
+/lat pulldown/lat pulldown_7.mp4,8,0.9830893278121948
+/lat pulldown/lat pulldown_9.mp4,8,0
+/lat pulldown/lat pulldown_3.mp4,8,0.00884007103741169
+/incline bench press/incline bench press_5.mp4,7,0.9971342086791992
+/incline bench press/incline bench press_9.mp4,7,0.9988889098167419
+/incline bench press/2.mp4,7,0.3347565233707428
+/incline bench press/incline bench press_7.mp4,7,0.9961215853691101
+/incline bench press/1.mp4,7,0.42978912591934204
+/incline bench press/incline bench press_0.mp4,7,0.992938756942749
+/incline bench press/incline bench press_4.mp4,7,0.9990849494934082
+/incline bench press/incline bench press_11.mp4,7,0.9921990036964417
+/incline bench press/incline bench press_2.mp4,7,0.9992469549179077
+/incline bench press/bench press_17.mp4,7,0
+/incline bench press/bench press_13.mp4,7,6.178834155434743e-05
+/incline bench press/incline bench press_3.mp4,7,0.9701386094093323
+/incline bench press/incline bench press_10.mp4,7,0.05825653299689293
+/incline bench press/incline bench press_1.mp4,7,0.9956455230712891
+/leg raises/leg raises_3.mp4,11,0.9826723337173462
+/leg raises/4.mp4,11,0.0229498241096735
+/leg raises/leg raises_5.mp4,11,0.9790350198745728
+/leg raises/leg raises_10.mp4,11,0.9993439316749573
+/leg raises/leg raises_9.mp4,11,0.9994626641273499
+/leg raises/2.mp4,11,0.9985834360122681
+/leg raises/c.mp4,11,0.9983569979667664
+/leg raises/1.mp4,11,0.9992316961288452
+/leg raises/s.mp4,11,0.05866348370909691
+/leg raises/leg raises_4.mp4,11,0.9991211295127869
+/leg raises/leg raises_8.mp4,11,0.9984369874000549
+/leg raises/leg raises_7.mp4,11,0.44150474667549133
+/leg raises/leg raises_2.mp4,11,0.9958561062812805
+/leg raises/leg raises_0.mp4,11,0.05471041426062584
+/leg raises/a.mp4,11,0.7452883124351501
+/leg raises/leg raises_1.mp4,11,0.903124988079071
+/leg raises/leg raises_6.mp4,11,0.9981889128684998
+/leg raises/3.mp4,11,0.9995526671409607
+/lateral raise/lateral raise_2.mp4,9,0.8147809505462646
+/lateral raise/lateral raise_8.mp4,9,0
+/lateral raise/1.mp4,9,0.00024501862935721874
+/lateral raise/lateral raise_1.mp4,9,0.03681441396474838
+/lateral raise/lateral raise_0.mp4,9,0.0016033650608733296
+/lateral raise/lateral raise_7.mp4,9,0.004225545562803745
+/lateral raise/lateral raise_11.mp4,9,0.007723356131464243
+/lateral raise/lateral raise_3.mp4,9,0.9995408058166504
+/lateral raise/lateral raise_4.mp4,9,0.9993696808815002
+/t bar row/t bar row_5.mp4,19,0.9977244734764099
+/t bar row/t bar row_15.mp4,19,0
+/t bar row/t bar row_6.mp4,19,0.9958475828170776
+/t bar row/t bar row_13.mp4,19,0.9673493504524231
+/t bar row/t bar row_2.mp4,19,0.9956711530685425
+/t bar row/t bar row_11.mp4,19,0.49657315015792847
+/t bar row/t bar row_1.mp4,19,0
+/t bar row/t bar row_20.mp4,19,0
+/t bar row/t bar row_17.mp4,19,0.9988358616828918
+/t bar row/t bar row_21.mp4,19,0
+/t bar row/t bar row_7.mp4,19,0.9872781038284302
+/t bar row/t bar row_0.mp4,19,0.9093921780586243
+/t bar row/t bar row_18.mp4,19,0
+/t bar row/t bar row_14.mp4,19,0.9990839958190918
+/t bar row/t bar row_9.mp4,19,0
+/t bar row/t bar row_19.mp4,19,0.9959698915481567
+/t bar row/t bar row_3.mp4,19,0.9186692833900452
+/t bar row/t bar row_10.mp4,19,0.999451220035553
+/t bar row/t bar row_8.mp4,19,0
+/t bar row/t bar row_16.mp4,19,0.9993895292282104
+/t bar row/t bar row_4.mp4,19,0.965610921382904
+/t bar row/t bar row_12.mp4,19,0.9993337988853455
+/plank/plank_4.mp4,12,0.9989731311798096
+/plank/4.mp4,12,0.9990658164024353
+/plank/plank_0.mp4,12,0.9986698627471924
+/plank/plank_10.mp4,12,0
+/plank/2.mp4,12,0.024958085268735886
+/plank/7.mp4,12,0.9991416931152344
+/plank/6.mp4,12,0
+/plank/1.mp4,12,0.9968875050544739
+/plank/plank_1.mp4,12,0.9990647435188293
+/plank/5.mp4,12,0.0076219867914915085
+/plank/plank_7.mp4,12,0.3051110804080963
+/plank/plank_2.mp4,12,0.9991932511329651
+/plank/plank_6.mp4,12,0
+/plank/plank_9.mp4,12,0
+/plank/plank_3.mp4,12,0.9990065693855286
+/plank/plank_8.mp4,12,0.0682561919093132
+/plank/plank_5.mp4,12,0
+/plank/3.mp4,12,0.995764970779419
+/romanian deadlift/romanian deadlift_9.mp4,15,0.9949275255203247
+/romanian deadlift/romanian deadlift_11.mp4,15,0.9938486218452454
+/romanian deadlift/romanian deadlift_3.mp4,15,0.93330979347229
+/romanian deadlift/2.mp4,15,0.023124707862734795
+/romanian deadlift/romanian deadlift_6.mp4,15,0.6929251551628113
+/romanian deadlift/romanian deadlift_0.mp4,15,0.3531757891178131
+/romanian deadlift/1.mp4,15,0.6323438882827759
+/romanian deadlift/romanian deadlift_7.mp4,15,0.8913620114326477
+/romanian deadlift/romanian deadlift_8.mp4,15,0.9961878657341003
+/romanian deadlift/romanian deadlift_1.mp4,15,0.997381865978241
+/romanian deadlift/romanian deadlift_2.mp4,15,0.013709576800465584
+/romanian deadlift/romanian deadlift_4.mp4,15,0.01300109177827835
+/romanian deadlift/romanian deadlift_10.mp4,15,0.038479845970869064
+/romanian deadlift/romanian deadlift_5.mp4,15,0.22896426916122437
+/romanian deadlift/3.mp4,15,0
+/shoulder press/shoulder press_0.mp4,17,0.9992977380752563
+/shoulder press/shoulder press_1.mp4,17,0.9994181394577026
+/shoulder press/shoulder press_5.mp4,17,0.9981687068939209
+/shoulder press/shoulder press_3.mp4,17,0.9975669384002686
+/shoulder press/shoulder press_7.mp4,17,0.8642870187759399
+/shoulder press/shoulder press_8.mp4,17,0.604300320148468
+/shoulder press/shoulder press_9.mp4,17,0.8700777888298035
+/shoulder press/shoulder press_6.mp4,17,0.9905181527137756
+/shoulder press/shoulder press_2.mp4,17,0.6287403702735901
+/shoulder press/shoulder press_4.mp4,17,0.8713622689247131
+/decline bench press/d5.mp4,4,0.9863944053649902
+/decline bench press/decline bench press_0.mp4,4,0
+/decline bench press/decline bench press_1.mp4,4,0.022618034854531288
+/decline bench press/d4.mp4,4,0.026850640773773193
+/decline bench press/d9.mp4,4,9.915622649714351e-05
+/decline bench press/decline bench press_4.mp4,4,0.0013528820127248764
+/decline bench press/d6.mp4,4,0.5666882395744324
+/decline bench press/d1.mp4,4,0.9984318614006042
+/decline bench press/decline bench press_7.mp4,4,0.015263781882822514
+/decline bench press/d7.mp4,4,0.9555824398994446
+/decline bench press/d2.mp4,4,0.9970306158065796
+/decline bench press/decline bench press_6.mp4,4,6.517276051454246e-05
+/decline bench press/d8.mp4,4,0
+/decline bench press/decline bench press_3.mp4,4,0.001854862435720861
+/decline bench press/d3.mp4,4,0.7305947542190552
+/decline bench press/decline bench press_2.mp4,4,0.008832396939396858
+/push-up/push-up_9.mp4,14,0
+/push-up/push-up_4.mp4,14,0.9810964465141296
+/push-up/push-up_7.mp4,14,0.9981759786605835
+/push-up/push-up_8.mp4,14,0.9993682503700256
+/push-up/push-up_1.mp4,14,0.49131935834884644
+/push-up/push-up_2.mp4,14,0
+/push-up/push-up_6.mp4,14,0.9996665716171265
+/push-up/push-up_0.mp4,14,0
+/push-up/push-up_5.mp4,14,0
+/push-up/push-up_3.mp4,14,0
+/chest fly machine/chest fly machine_4.mp4,2,0.998230516910553
+/chest fly machine/chest fly machine_3.mp4,2,0.999603807926178
+/chest fly machine/chest fly machine_17.mp4,2,0.9924672245979309
+/chest fly machine/chest fly machine_1.mp4,2,0.9996166229248047
+/chest fly machine/chest fly machine_10.mp4,2,0.9996817111968994
+/chest fly machine/chest fly machine_16.mp4,2,0.9997013211250305
+/chest fly machine/chest fly machine_2.mp4,2,0.01661166362464428
+/chest fly machine/chest fly machine_5.mp4,2,0.999591052532196
+/chest fly machine/chest fly machine_9.mp4,2,0.9993748068809509
+/chest fly machine/chest fly machine_6.mp4,2,0.005281263962388039
+/chest fly machine/chest fly machine_0.mp4,2,0.9688034057617188
+/chest fly machine/chest fly machine_13.mp4,2,0.9996629953384399
+/chest fly machine/chest fly machine_18.mp4,2,0.9996572732925415
+/chest fly machine/chest fly machine_11.mp4,2,0.9984371066093445
+/chest fly machine/chest fly machine_14.mp4,2,0.8582720160484314
+/chest fly machine/chest fly machine_15.mp4,2,0.9996346235275269
+/chest fly machine/chest fly machine_7.mp4,2,0.9994268417358398
+/chest fly machine/chest fly machine_8.mp4,2,0.12924276292324066
+/chest fly machine/chest fly machine_12.mp4,2,0.9985982775688171
+/chest fly machine/chest fly machine_19.mp4,2,0.6262553930282593
+/hip thrust/hip thrust_1.mp4,6,0.9965201616287231
+/hip thrust/hip thrust_11.mp4,6,0.014581735245883465
+/hip thrust/hip thrust_5.mp4,6,0
+/hip thrust/hip thrust_2.mp4,6,0.9988368153572083
+/hip thrust/2.mp4,6,0
+/hip thrust/hip thrust_8.mp4,6,0.9964262843132019
+/hip thrust/1.mp4,6,0.998675525188446
+/hip thrust/hip thrust_13.mp4,6,0.9594361186027527
+/hip thrust/5.mp4,6,0
+/hip thrust/hip thrust_7.mp4,6,0.25118017196655273
+/hip thrust/hip thrust_3.mp4,6,0.04532453790307045
+/hip thrust/hip thrust_12.mp4,6,0.001501996535807848
+/hip thrust/hip thrust_0.mp4,6,0.691501796245575
+/hip thrust/3.mp4,6,0
+/barbell biceps curl/barbell biceps curl_19.mp4,0,0.9967910647392273
+/barbell biceps curl/barbell biceps curl_15.mp4,0,0.9995625615119934
+/barbell biceps curl/barbell biceps curl_9.mp4,0,0.9904955625534058
+/barbell biceps curl/barbell biceps curl_1.mp4,0,0.23610161244869232
+/barbell biceps curl/barbell biceps curl_5.mp4,0,0.9996914863586426
+/barbell biceps curl/barbell biceps curl_14.mp4,0,0.9997237324714661
+/barbell biceps curl/barbell biceps curl_6.mp4,0,0.0007872118731029332
+/barbell biceps curl/barbell biceps curl_10.mp4,0,0.49398964643478394
+/barbell biceps curl/barbell biceps curl_13.mp4,0,0.002256261883303523
+/barbell biceps curl/barbell biceps curl_17.mp4,0,0.9978873133659363
+/barbell biceps curl/barbell biceps curl_8.mp4,0,0.6535645723342896
+/barbell biceps curl/barbell biceps curl_16.mp4,0,0.0023339479230344296
+/barbell biceps curl/barbell biceps curl_3.mp4,0,0.9865136742591858
+/barbell biceps curl/barbell biceps curl_0.mp4,0,0.9997130036354065
+/barbell biceps curl/barbell biceps curl_4.mp4,0,0.030449772253632545
+/barbell biceps curl/barbell biceps curl_11.mp4,0,0.9633117318153381
+/barbell biceps curl/barbell biceps curl_2.mp4,0,0.9535205960273743
+/barbell biceps curl/barbell biceps curl_12.mp4,0,0.9694247841835022
+/barbell biceps curl/barbell biceps curl_18.mp4,0,0.9816470742225647
+/barbell biceps curl/barbell biceps curl_7.mp4,0,0.9989789724349976
+/russian twist/russian twist_10.mp4,16,0.9982962012290955
+/russian twist/4.mp4,16,0.08698345720767975
+/russian twist/2.mp4,16,0.2548781931400299
+/russian twist/6.mp4,16,0
+/russian twist/1.mp4,16,0
+/russian twist/russian twist_2.mp4,16,0.9995720982551575
+/russian twist/russian twist_3.mp4,16,0.9944202303886414
+/russian twist/russian twist_4.mp4,16,0
+/russian twist/5.mp4,16,0.0321979895234108
+/russian twist/russian twist_6.mp4,16,0.9865211248397827
+/russian twist/russian twist_8.mp4,16,0.5009270310401917
+/russian twist/russian twist_5.mp4,16,0.8934988975524902
+/russian twist/russian twist_7.mp4,16,0.9969488978385925
+/russian twist/russian twist_1.mp4,16,0.9988864064216614
+/russian twist/russian twist_9.mp4,16,0.006391589529812336
+/russian twist/russian twist_0.mp4,16,0.18788422644138336
+/russian twist/3.mp4,16,0.0007124047842808068
+/tricep Pushdown/tricep pushdown_1.mp4,20,0.9465537071228027
+/tricep Pushdown/tricep pushdown_3.mp4,20,0.9990704655647278
+/tricep Pushdown/tricep pushdown_0.mp4,20,0.9979903697967529
+/tricep Pushdown/tricep pushdown_9.mp4,20,0.9997066855430603
+/tricep Pushdown/tricep pushdown_4.mp4,20,0.9979397654533386
+/tricep Pushdown/tricep pushdown_7.mp4,20,0.9997262358665466
+/tricep Pushdown/tricep pushdown_6.mp4,20,0.9996782541275024
+/tricep Pushdown/tricep pushdown_5.mp4,20,0.9995974898338318
+/tricep Pushdown/tricep pushdown_2.mp4,20,0.0892743319272995
+/tricep Pushdown/tricep pushdown_8.mp4,20,0.9996950626373291
+/tricep Pushdown/tricep pushdown_10.mp4,20,0.9994018077850342
+/tricep Pushdown/tricep pushdown_11.mp4,20,0.994263231754303
+/deadlift/deadlift_18.mp4,3,0.9993484616279602
+/deadlift/deadlift_0.mp4,3,0.9993353486061096
+/deadlift/deadlift_14.mp4,3,0.9986845850944519
+/deadlift/deadlift_6.mp4,3,0
+/deadlift/deadlift_2.mp4,3,0.9990397095680237
+/deadlift/deadlift_3.mp4,3,0.9991194605827332
+/deadlift/deadlift_9.mp4,3,0.9958832263946533
+/deadlift/deadlift_12.mp4,3,0.9987382292747498
+/deadlift/deadlift_15.mp4,3,0.8544291853904724
+/deadlift/deadlift_5.mp4,3,0.9991034865379333
+/deadlift/deadlift_11.mp4,3,0.999300479888916
+/deadlift/deadlift_4.mp4,3,0.9914636015892029
+/deadlift/deadlift_17.mp4,3,0.9989877343177795
+/deadlift/deadlift_1.mp4,3,0.30442649126052856
+/deadlift/deadlift_13.mp4,3,0.9951228499412537
+/deadlift/deadlift_10.mp4,3,0.9985188841819763
+/deadlift/deadlift_7.mp4,3,0.3571470081806183
+/deadlift/deadlift_8.mp4,3,0.999458372592926
+/deadlift/deadlift_16.mp4,3,0.17234137654304504
+/squat/squat_10.mp4,18,0.933052122592926
+/squat/squat_7.mp4,18,0.9982654452323914
+/squat/squat_8.mp4,18,0.001794137991964817
+/squat/squat_4.mp4,18,0.7174916863441467
+/squat/squat_2.mp4,18,0.13222098350524902
+/squat/squat_5.mp4,18,0.9918848276138306
+/squat/squat_6.mp4,18,0.9990170001983643
+/squat/squat_1.mp4,18,0.9928849339485168
+/squat/a.mp4,18,0
+/squat/squat_9.mp4,18,0.0002313103759661317
+/squat/squat_3.mp4,18,0
+/squat/squat_0.mp4,18,0.07681407779455185

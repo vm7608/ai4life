@@ -1,6 +1,5 @@
 wandb
-ai4life-personal-trainer
-checkpoint-6764
+checkpoints/
 .env
 
 __pycache__/

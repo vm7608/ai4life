@@ -1,26 +1,31 @@
 import pathlib
 
 import pandas
+import tqdm
+from decord import VideoReader, cpu
 
 
-data_paths = ["data_csv/train.csv", "data_csv/val.csv"]
+data_paths = [
+    "/home/manhckv/manhckv/ai4life/label_1951/train_info.tsv",
+    "/home/manhckv/manhckv/ai4life/label_1951/val_info.tsv",
+]
 
-dataset_root_path = pathlib.Path("/HDD1/manhckv/_manhckv")
+dataset_root_path = pathlib.Path("/HDD1/manhckv/_manhckv/data-ai4life/data-btc")
 for data_path in data_paths:
     data = pandas.read_csv(data_path, sep="\t", header=None)
     # get the first column and convert to list
     data_list = data[0].tolist()
-
-    for file_path in data_list:
-        # folder_name = file_path.split("/")[0]
-
-        # file_name = file_path.split("/")[1]
-        # file_name = file_name.split("_")[0]
-
-        # # print(folder_name, file_name)
-        # if folder_name.lower() != file_name.lower():
-        #     print("Error: ", data_path, "->", file_path)
-        video_path = dataset_root_path / file_path
+    print(len(data_list))
+    for file_path in tqdm.tqdm(data_list):
+        video_path = (dataset_root_path / file_path).resolve()
+        try:
+            vr = VideoReader(str(video_path))
+            for i in range(len(vr)):
+                frame = vr[i]
+        except Exception as e:
+            print(e)
+            print(video_path)
+            raise e
 
         # check if the file exists
         if not video_path.exists():
