@@ -5,6 +5,8 @@ import tqdm
 from decord import VideoReader, cpu
 
 
+data_paths = ["./data_csv_2/train_info.csv", "./data_csv_2/val_info.csv"]
+
 data_paths = [
     "/home/manhckv/manhckv/ai4life/label_1951/train_info.tsv",
     "/home/manhckv/manhckv/ai4life/label_1951/val_info.tsv",

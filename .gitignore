@@ -3,3 +3,6 @@ checkpoints/
 .env
 
 __pycache__/
+data_stable/*
+data_stable_images/*
+*.zip
