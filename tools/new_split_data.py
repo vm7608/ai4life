@@ -1,8 +1,8 @@
 import pandas as pd
 
 
-csv_path1 = "/home/manhckv/manhckv/ai4life/full-btc-al(6764).csv"
-csv_path2 = "/home/manhckv/manhckv/ai4life/full-crawl-al(6764).csv"
+csv_path1 = "/home/manhckv/manhckv/ai4life/csv_info/full-btc-al(6764).csv"
+csv_path2 = "/home/manhckv/manhckv/ai4life/csv_info/full-crawl-al(6764).csv"
 
 train_df = pd.DataFrame(columns=["file_path", "label"])
 
@@ -40,8 +40,8 @@ for row in data2.iterrows():
         )
 
 
-print(len(data1[data1["score"] < 0.8]))
-print(len(data2[data2["score"] < 0.8]))
+print(len(data1[data1["score"] < 0.6]))
+print(len(data2[data2["score"] < 0.6]))
 print(len(train_df))
 
-train_df.to_csv("275_train_info.tsv", index=False, header=False, sep="\t")
+# train_df.to_csv("275_train_info.tsv", index=False, header=False, sep="\t")

@@ -19,7 +19,10 @@ from transformers import (
 from label_and_id import ID2LABEL, LABEL2ID
 
 
+torch.set_num_threads(3)
+
 warnings.filterwarnings("ignore")
+
 
 def run_test(model_ckpt, test_root_path, test_tsv_path):
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -64,12 +67,29 @@ def run_test(model_ckpt, test_root_path, test_tsv_path):
     print(f"Accuracy: {accuracy}")
     # print the classification report
     print(classification_report(ground_truth, predictions))
+    # print the confusion matrix
+    cm = confusion_matrix(ground_truth, predictions)
+    print("======== Confusion Matrix ========")
+    print(cm)
+    print("=================================")
 
 
 if __name__ == "__main__":
 
-    model_ckpt = "/home/manhckv/manhckv/ai4life/checkpoint-6764"
     test_root_path = "/HDD1/manhckv/_manhckv/ai4life-data"
-    test_tsv_path = "/home/manhckv/manhckv/ai4life/275_train_info.tsv"
 
+    # model_ckpt = "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-6764"
+    # model_ckpt = "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-1173"
+    # model_ckpt = "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-1360"
+    model_ckpt = "/home/manhckv/manhckv/ai4life/checkpoints/ai4life-personal-trainer/checkpoint-1951"
+    # model_ckpt = "/home/manhckv/manhckv/ai4life/checkpoint-1242"
+
+    # test_tsv_path = "/home/manhckv/manhckv/ai4life/csv_info/all_data.csv"
+    # test_tsv_path = "/home/manhckv/manhckv/ai4life/csv_info/full_btc.tsv"
+    test_tsv_path = "/home/manhckv/manhckv/ai4life/csv_info/full_crawl.tsv"
+    # test_tsv_path = "/HDD1/manhckv/_manhckv/ai4life-data/val_info.tsv"
+    # test_tsv_path = "/home/manhckv/manhckv/ai4life/csv_info/275_train_info.tsv"
+
+    print(model_ckpt)
+    print(test_tsv_path)
     run_test(model_ckpt, test_root_path, test_tsv_path)
