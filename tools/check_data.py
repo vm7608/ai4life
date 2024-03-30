@@ -5,14 +5,10 @@ import tqdm
 from decord import VideoReader, cpu
 
 
-data_paths = ["./data_csv_2/train_info.csv", "./data_csv_2/val_info.csv"]
+data_paths = ['/workspace/ai4life/csv_info/275_train_info.tsv',]
 
-data_paths = [
-    "/home/manhckv/manhckv/ai4life/label_1951/train_info.tsv",
-    "/home/manhckv/manhckv/ai4life/label_1951/val_info.tsv",
-]
 
-dataset_root_path = pathlib.Path("/HDD1/manhckv/_manhckv/data-ai4life/data-btc")
+dataset_root_path = pathlib.Path('/workspace/ai4life-data')
 for data_path in data_paths:
     data = pandas.read_csv(data_path, sep="\t", header=None)
     # get the first column and convert to list
