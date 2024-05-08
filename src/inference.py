@@ -8,9 +8,8 @@ from transformers import (
 from src.label_and_id import ID2LABEL, LABEL2ID
 
 
-def run_inference(model_ckpt, video_path, device="cuda"):
-    # device = "cpu"
-    # device = "cuda" if torch.cuda.is_available() else "cpu"
+def run_inference(model_ckpt, video_path):
+    device = "cuda" if torch.cuda.is_available() else "cpu"
 
     image_processor = VideoMAEImageProcessor.from_pretrained(model_ckpt)
     model = VideoMAEForVideoClassification.from_pretrained(
@@ -30,9 +29,7 @@ def run_inference(model_ckpt, video_path, device="cuda"):
 
 
 if __name__ == "__main__":
-    model_ckpt = "/home/manhckv/manhckv/ai4life/checkpoint-6764"
-    video_path = (
-        "/HDD1/manhckv/_manhckv/ai4life-data/data-crawl/bench press/bench press_9.mp4"
-    )
+    model_ckpt = "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-1242"
+    video_path = "/HDD1/manhckv/_manhckv/ai4life-data/temp/cc0f8363-515a-4df4-9ee2-25796382e0a4.mp4"
     _, _, pred = run_inference(model_ckpt, video_path)
     print(pred)

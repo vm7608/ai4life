@@ -6,3 +6,4 @@ __pycache__/
 data_stable/*
 data_stable_images/*
 *.zip
+_backup/
