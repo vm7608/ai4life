@@ -43,7 +43,7 @@ def prepare_dataset(
     val_tsv_path,
     image_processor,
     model,
-    sample_rate=4,
+    sample_rate=8,
     fps=30,
 ):
     mean = image_processor.image_mean

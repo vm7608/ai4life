@@ -12,9 +12,10 @@ from transformers import (
 
 from helper import collate_fn, compute_metrics, prepare_dataset
 from label_and_id import ID2LABEL, LABEL2ID
+import warnings
 
-
-os.environ["WANDB_PROJECT"] = "ckpt-6764-275"
+warnings.filterwarnings("ignore")
+os.environ["WANDB_PROJECT"] = "cpkt-8-sr"
 
 
 def train_model(
@@ -59,7 +60,6 @@ def train_model(
         per_device_train_batch_size=batch_size,
         per_device_eval_batch_size=batch_size,
         logging_steps=10,
-        load_best_model_at_end=True,
         metric_for_best_model=metric_for_best_model,
         push_to_hub=False,
         max_steps=(train_dataset.num_videos // batch_size) * num_epochs,
@@ -83,8 +83,8 @@ def run_train(dataset_root_path, train_tsv_path, val_tsv_path):
     # ======== Preparing the model ========
     # MODEL_CKPT = "MCG-NJU/videomae-base" # base model/only pretrain -> 94.2M params
     # MODEL_CKPT = "MCG-NJU/videomae-large"  # large model/only pretrain -> 343M params
-    # MODEL_CKPT = "MCG-NJU/videomae-base-finetuned-kinetics" # base model/finetuned on kinetics -> 86.5M params
-    MODEL_CKPT = "MCG-NJU/videomae-large-finetuned-kinetics"  # large model/finetuned on kinetics -> 304M params
+    MODEL_CKPT = "MCG-NJU/videomae-base-finetuned-kinetics" # base model/finetuned on kinetics -> 86.5M params
+    # MODEL_CKPT = "MCG-NJU/videomae-large-finetuned-kinetics"  # large model/finetuned on kinetics -> 304M params
 
     image_processor = VideoMAEImageProcessor.from_pretrained(MODEL_CKPT)
     model = VideoMAEForVideoClassification.from_pretrained(
@@ -104,8 +104,8 @@ def run_train(dataset_root_path, train_tsv_path, val_tsv_path):
     )
 
     # ======== Training the model ========
-    MODEL_NAME = "/HDD1/manhckv/_manhckv/ckpt/ai4life-pt"
-    NUM_EPOCHS = 50
+    MODEL_NAME = "/workspace/cktp/cpkt-8-sr"
+    NUM_EPOCHS = 20
     BATCH_SIZE = 4
     LEARNING_RATE = 5e-5
     WARMUP_RATIO = 0.1
@@ -138,8 +138,8 @@ if __name__ == "__main__":
 
     # ======== Preparing path ========
 
-    dataset_root_path = pathlib.Path("/HDD1/manhckv/_manhckv")
-    train_tsv_path = "/home/manhckv/manhckv/ai4life/data_csv/train.csv"
-    val_tsv_path = "/home/manhckv/manhckv/ai4life/data_csv/val.csv"
+    dataset_root_path = pathlib.Path("/workspace")
+    train_tsv_path = "/workspace/ai4life/src/train_07052024.tsv"
+    val_tsv_path = "/workspace/ai4life/src/train_07052024.tsv"
 
     run_train(dataset_root_path, train_tsv_path, val_tsv_path)
