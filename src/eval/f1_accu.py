@@ -16,6 +16,7 @@ warnings.filterwarnings("ignore")
 
 
 def run_test(model_ckpt, test_root_dir):
+    """Infer không cắt video"""
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     image_processor = VideoMAEImageProcessor.from_pretrained(model_ckpt)
@@ -55,7 +56,8 @@ def run_test(model_ckpt, test_root_dir):
     print_results(ground_truth, predictions)
 
 
-def run_test_segment(model_ckpt, test_root_dir):
+def run_test_segment(model_ckpt, test_root_dir, chunk_size, overlap):
+    """Infer chia video thành các đoạn nhỏ nối tiếp overlap nhau 3s"""
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     image_processor = VideoMAEImageProcessor.from_pretrained(model_ckpt)
@@ -80,7 +82,7 @@ def run_test_segment(model_ckpt, test_root_dir):
         for file in os.listdir(folder_path):
             file_path = os.path.join(folder_path, file)
             video_length = int(float(ffmpeg.probe(file_path)["format"]["duration"]))
-            video_segments = segment_video(video_length)
+            video_segments = segment_video(video_length, chunk_size, overlap)
 
             label_id = LABEL2ID[folder]
             ground_truth.append(label_id)
@@ -107,6 +109,7 @@ def run_test_segment(model_ckpt, test_root_dir):
 
 
 def run_test_crop(model_ckpt, test_root_dir, crop_length=5):
+    """Infer chia video thành các đoạn nhỏ nối tiếp nhau"""
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     image_processor = VideoMAEImageProcessor.from_pretrained(model_ckpt)
@@ -135,7 +138,6 @@ def run_test_crop(model_ckpt, test_root_dir, crop_length=5):
             label_id = LABEL2ID[folder]
             ground_truth.append(label_id)
 
-            # crop the video in to small consecutive clips
             list_of_clips = []
             for i in range(0, video_length, crop_length):
                 start_time = i
@@ -163,15 +165,17 @@ def run_test_crop(model_ckpt, test_root_dir, crop_length=5):
 
 if __name__ == "__main__":
     CROPPED_DIR = "/HDD1/manhckv/_manhckv/ai4life-data/temp"
+    os.makedirs(CROPPED_DIR, exist_ok=True)
 
     model_ckpts = [
-        "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-1242",
-        # ----------------------------------------------------------
+        # "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-1242",
         "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-3537",
+        "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-5502",
     ]
 
     # path to the test data
     test_root_dir = "/HDD1/manhckv/_manhckv/ai4life-data/test_btc"
+
     # test_root_dir = "/HDD1/manhckv/_manhckv/ai4life-data/data-btc"
     # test_root_dir = "/HDD1/manhckv/_manhckv/ai4life-data/data-crawl"
 
@@ -182,7 +186,6 @@ if __name__ == "__main__":
     for model_ckpt in model_ckpts:
         print("*" * 50)
         # run_test(model_ckpt, test_root_dir)
-
-        run_test_crop(model_ckpt, test_root_dir, crop_length=5)
-        run_test_segment(model_ckpt, test_root_dir)
+        # run_test_crop(model_ckpt, test_root_dir, crop_length=5)
+        run_test_segment(model_ckpt, test_root_dir, chunk_size=10, overlap=3)
         print("*" * 50)

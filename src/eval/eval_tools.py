@@ -61,18 +61,18 @@ LABEL2ID = {
 }
 
 
-def segment_video(video_length, chunk_size=10, max_overlap=5):
-    if video_length < chunk_size + max_overlap:
+def segment_video(video_length, chunk_size=10, overlap=3):
+    if video_length < chunk_size + overlap:
         return [(0, video_length)]
 
-    num_chunks = math.ceil((video_length - max_overlap) / (chunk_size - max_overlap))
+    num_chunks = math.ceil((video_length - overlap) / (chunk_size - overlap))
     chunk_start = 0
     segments = []
 
     for i in range(num_chunks):
         chunk_end = min(chunk_start + chunk_size, video_length)
         segments.append((chunk_start, chunk_end))
-        chunk_start += chunk_size - max_overlap
+        chunk_start += chunk_size - overlap
 
     return segments
 
@@ -95,10 +95,11 @@ def crop_video(video_file, start_time, end_time, save_dir):
 
 
 def print_results(ground_truth, predictions):
+    print(f"GT: {ground_truth}")
+    print(f"DT: {predictions}")
     print(f"Accuracy: {accuracy_score(ground_truth, predictions)}")
     print(f"F1 macro: {f1_score(ground_truth, predictions, average='macro')}")
     print(f"F1 weighted: {f1_score(ground_truth, predictions, average='weighted')}")
-    breakpoint()
     print(
         classification_report(ground_truth, predictions, target_names=ID2LABEL.values())
     )
