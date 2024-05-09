@@ -17,6 +17,7 @@ warnings.filterwarnings("ignore")
 
 def run_test(model_ckpt, test_root_dir):
     """Infer không cắt video"""
+    print("Run test without cropping")
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     image_processor = VideoMAEImageProcessor.from_pretrained(model_ckpt)
@@ -58,6 +59,7 @@ def run_test(model_ckpt, test_root_dir):
 
 def run_test_segment(model_ckpt, test_root_dir, chunk_size, overlap):
     """Infer chia video thành các đoạn nhỏ nối tiếp overlap nhau 3s"""
+    print(f"Run test with segmenting with {chunk_size}s and overlap {overlap}s")
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     image_processor = VideoMAEImageProcessor.from_pretrained(model_ckpt)
@@ -110,6 +112,7 @@ def run_test_segment(model_ckpt, test_root_dir, chunk_size, overlap):
 
 def run_test_crop(model_ckpt, test_root_dir, crop_length=5):
     """Infer chia video thành các đoạn nhỏ nối tiếp nhau"""
+    print(f"Run test with cropping with {crop_length}s")
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     image_processor = VideoMAEImageProcessor.from_pretrained(model_ckpt)
@@ -169,23 +172,30 @@ if __name__ == "__main__":
 
     model_ckpts = [
         # "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-1242",
-        "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-3537",
-        "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-5502",
+        # "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-3537",
+        # "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-5000",
+        # "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-5500",
+        "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-6000",
     ]
 
     # path to the test data
-    test_root_dir = "/HDD1/manhckv/_manhckv/ai4life-data/test_btc"
-
-    # test_root_dir = "/HDD1/manhckv/_manhckv/ai4life-data/data-btc"
-    # test_root_dir = "/HDD1/manhckv/_manhckv/ai4life-data/data-crawl"
-
-    # test_root_dir = "/HDD1/manhckv/_manhckv/ai4life-data/data_btc_10s"
-    # test_root_dir = "/HDD1/manhckv/_manhckv/ai4life-data/data_crawl_10s"
+    test_dirs = [
+        # "/HDD1/manhckv/_manhckv/ai4life-data/test_btc",
+        # "/HDD1/manhckv/_manhckv/ai4life-data/data_btc_10s",
+        # "/HDD1/manhckv/_manhckv/ai4life-data/data_crawl_10s",
+        # "/HDD1/manhckv/_manhckv/ai4life-data/data-btc",
+        "/HDD1/manhckv/_manhckv/ai4life-data/data-crawl",
+    ]
 
     # run the test
     for model_ckpt in model_ckpts:
-        print("*" * 50)
-        # run_test(model_ckpt, test_root_dir)
-        # run_test_crop(model_ckpt, test_root_dir, crop_length=5)
-        run_test_segment(model_ckpt, test_root_dir, chunk_size=10, overlap=3)
-        print("*" * 50)
+        for test_dir in test_dirs:
+            print("*" * 50)
+            # run_test(model_ckpt, test_dir)
+            # run_test_crop(model_ckpt, test_dir, crop_length=5)
+            # run_test_segment(model_ckpt, test_dir, chunk_size=5, overlap=1)
+
+            # run_test_crop(model_ckpt, test_dir, crop_length=10)
+            run_test_segment(model_ckpt, test_dir, chunk_size=10, overlap=3)
+            print("*" * 50)
+        print("=" * 50)

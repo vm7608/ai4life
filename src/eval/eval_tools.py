@@ -95,8 +95,8 @@ def crop_video(video_file, start_time, end_time, save_dir):
 
 
 def print_results(ground_truth, predictions):
-    print(f"GT: {ground_truth}")
-    print(f"DT: {predictions}")
+    # print(f"GT: {ground_truth}")
+    # print(f"DT: {predictions}")
     print(f"Accuracy: {accuracy_score(ground_truth, predictions)}")
     print(f"F1 macro: {f1_score(ground_truth, predictions, average='macro')}")
     print(f"F1 weighted: {f1_score(ground_truth, predictions, average='weighted')}")
