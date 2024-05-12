@@ -1,3 +1,5 @@
+# This script is used to convert all the videos in the dataset to mp4 format.
+
 import os
 import shutil
 
@@ -5,8 +7,8 @@ import ffmpeg
 from tqdm import tqdm
 
 
-dataset_dir = "data_ai4life"
-output_dir = "raw_video"
+dataset_dir = "new_raw"
+output_dir = "new_processed_raw"
 os.makedirs(output_dir, exist_ok=True)
 
 
@@ -24,8 +26,6 @@ for folder in tqdm(os.listdir(dataset_dir)):
             # copy the video to the output folder
             output_file = os.path.join(output_folder, "{}_{}.mp4".format(folder, idx))
             shutil.copy(file_path, output_file)
-
-            #
 
         else:
 

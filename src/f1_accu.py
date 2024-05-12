@@ -3,13 +3,15 @@ import warnings
 
 import ffmpeg
 import torch
-from eval_tools import ID2LABEL, LABEL2ID, crop_video, print_results, segment_video
 from tqdm import tqdm
 from transformers import (
     VideoMAEForVideoClassification,
     VideoMAEImageProcessor,
     pipeline,
 )
+
+from eval_tools import crop_video, print_results, segment_video
+from label_and_id import ID2LABEL, LABEL2ID
 
 
 warnings.filterwarnings("ignore")

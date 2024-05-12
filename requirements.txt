@@ -1,5 +1,5 @@
 kaggle
-
+gdown==5.1.0 
 scikit-learn==1.3.2
 
 --find-links https://download.pytorch.org/whl/torch_stable.html

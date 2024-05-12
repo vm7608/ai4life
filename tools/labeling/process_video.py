@@ -26,8 +26,8 @@ def crop_video(input_file, output_file, start_time, end_time):
 
 if __name__ == "__main__":
 
-    raw_dir = "raw_video"
-    output_dir = "processed_video"
+    raw_dir = "new_processed_raw"
+    output_dir = "new_processed_video"
     os.makedirs(output_dir, exist_ok=True)
 
     ## Process the label file

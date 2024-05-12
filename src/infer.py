@@ -4,13 +4,15 @@ import warnings
 import ffmpeg
 import pandas as pd
 import torch
-from eval_tools import ID2LABEL, LABEL2ID, crop_video, segment_video
 from tqdm import tqdm
 from transformers import (
     VideoMAEForVideoClassification,
     VideoMAEImageProcessor,
     pipeline,
 )
+
+from eval_tools import crop_video, segment_video
+from label_and_id import ID2LABEL, LABEL2ID
 
 
 warnings.filterwarnings("ignore")
@@ -129,7 +131,7 @@ if __name__ == "__main__":
     model_ckpt = "/home/manhckv/manhckv/ai4life/checkpoints/checkpoint-6000"
     save_dir = "/home/manhckv/manhckv/ai4life/soutput"
 
-    TEST_DIR = "/home/manhckv/manhckv/ai4life/Test - Vòng loại"
+    TEST_DIR = "/home/manhckv/manhckv/ai4life/Dữ liệu kiểm thử vòng chung kết"
 
     import time
 
@@ -139,8 +141,8 @@ if __name__ == "__main__":
         video_path = os.path.join(TEST_DIR, video_file)
         try:
             # predict = infer_single(model_ckpt, video_path)
-            # predict = infer_crop(model_ckpt, video_path, crop_length=5)
-            predict = infer_segment(model_ckpt, video_path, chunk_size=5, overlap=1)
+            predict = infer_crop(model_ckpt, video_path, crop_length=5)
+            # predict = infer_segment(model_ckpt, video_path, chunk_size=5, overlap=1)
 
             all_results.append((video_file, predict))
         except Exception as e:
@@ -152,7 +154,7 @@ if __name__ == "__main__":
     df = pd.DataFrame(all_results, columns=["video", "predict"])
 
     # file_name = "predict_single.csv"
-    # file_name = "predict_crop.csv"
-    file_name = "predict_segment.csv"
+    file_name = "predict_crop.csv"
+    # file_name = "predict_segment.csv"
 
     df.to_csv(os.path.join(save_dir, file_name), index=False)

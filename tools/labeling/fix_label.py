@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-label = pd.read_csv("raw_label.csv")
+label = pd.read_csv("new_crawl.csv")
 
 # fill nan in the bad_sample column with 2
 label["bad_sample"].fillna(2, inplace=True)

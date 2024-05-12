@@ -47,13 +47,31 @@ def train_model(
     #     max_steps=(train_dataset.num_videos // batch_size) * num_epochs,
     # )
 
-    # Only train
+    # Only train and save checkpoint after each epoch
+    # args = TrainingArguments(
+    #     model_name,
+    #     remove_unused_columns=False,
+    #     evaluation_strategy="no",
+    #     do_eval=False,
+    #     save_strategy="epoch",
+    #     learning_rate=learning_rate,
+    #     warmup_ratio=warmup_ratio,
+    #     per_device_train_batch_size=batch_size,
+    #     per_device_eval_batch_size=batch_size,
+    #     logging_steps=10,
+    #     load_best_model_at_end=True,
+    #     metric_for_best_model=metric_for_best_model,
+    #     push_to_hub=False,
+    #     max_steps=(train_dataset.num_videos // batch_size) * num_epochs,
+    # )
+
+    # Only train and save checkpoint after 500 step
     args = TrainingArguments(
         model_name,
         remove_unused_columns=False,
         evaluation_strategy="no",
         do_eval=False,
-        save_strategy="epoch",
+        save_strategy="steps",
         learning_rate=learning_rate,
         warmup_ratio=warmup_ratio,
         per_device_train_batch_size=batch_size,
@@ -128,12 +146,12 @@ def run_train(dataset_root_path, train_tsv_path, val_tsv_path):
 if __name__ == "__main__":
 
     # ======== Logging in to Hugging Face Hub and Weights & Biases ========
-    hf_token = "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"
+    hf_token = "your_hugging_face_token"
     login(hf_token, add_to_git_credential=False)
 
     # ======== Logging in to Weights & Biases ========
     # Get key at https://wandb.ai/authorize
-    wandb_key = "7cef42da986b9a35aabf18181bc73a867a875b8f"
+    wandb_key = "your_wandb_key"
     wandb.login(key=wandb_key)
 
     # ======== Preparing path ========
